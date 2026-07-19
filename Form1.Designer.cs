@@ -78,7 +78,8 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(796, 446);
+            ControlBox = false;
             Controls.Add(Tip1);
             Controls.Add(progressBar1);
             Controls.Add(button1);
@@ -90,6 +91,7 @@
             ShowIcon = false;
             ShowInTaskbar = false;
             Text = "系统文件清除器 By Bilibili@ycs05_";
+            FormClosing += StopClose;
             ResumeLayout(false);
             PerformLayout();
         }

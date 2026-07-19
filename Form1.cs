@@ -5,6 +5,7 @@ public partial class Form1 : Form
 {
     private int _frameCount = 0;
     private DateTime _lastTime = DateTime.Now;
+    private int a = 0;
     public Form1()
     {
         InitializeComponent();
@@ -33,6 +34,16 @@ public partial class Form1 : Form
         if (progressBar1.Value == 100)
         {
             Tip1.Text = "系统毁灭成功！";
+            if (a < 10)
+            {
+                a++;
+            }
+            if (a == 2)
+            {
+                var bsod = new Form2();
+                this.Hide();
+                bsod.ShowDialog();
+            }
         }
         else if (progressBar1.Value <= 30)
         {
@@ -68,5 +79,13 @@ public partial class Form1 : Form
         button1.Enabled = false;
         progressBar1.Visible = true;
         Tip1.Visible = true;
+    }
+
+    private void StopClose(object sender, FormClosingEventArgs e)
+    {
+        if (progressBar1.Value < 100)
+        {
+            e.Cancel = true;
+        }
     }
 }
