@@ -15,6 +15,7 @@ namespace FakeDeleteSystemFiles
             InitializeComponent();
             this.Size = Screen.PrimaryScreen.Bounds.Size;
             this.Location = Screen.PrimaryScreen.Bounds.Location;
+            
         }
 
         private void Closed(object sender, FormClosedEventArgs e)

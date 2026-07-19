@@ -90,7 +90,10 @@
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "Form2";
+            ShowIcon = false;
+            ShowInTaskbar = false;
             Text = "FakeBSoD";
+            TopMost = true;
             FormClosed += Closed;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
